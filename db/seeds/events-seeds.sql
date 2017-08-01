@@ -1,0 +1,23 @@
+INSERT INTO events (date, time, title, location, description, contact_email, contact_phone, user_id)
+VALUES
+('Aug 30, 2017',
+'9:00AM - 1:00PM',
+'Anti-Bullying 101',
+'10 E 21st St, New York, NY 10010',
+'Almost 1 in 4 students reports being bullied at school, and so lets Do Something about it. We’re compiling the largest crowdsourced anti-bullying guide, and we want your ideas!', 
+'planner@events.com',
+'201-222-0011', 1),
+('Sep 10, 2017',
+'10:00AM - 12:00PM',
+'A Cleaner Better Future',
+'300 W 1st St, New York, NY 10001',
+'President Trump recently withdrew the US from the Paris Agreement, a global treaty to protect the planet. Now, it’s up to states to uphold the standards of the agreement.', 
+'green@events.com',
+'201-342-8711', 2),
+('Oct 10, 2017',
+'9:00AM - 12:00PM',
+'Thumbs War',
+'870 E 11th St, New York, NY 10012',
+'We all know texting and driving is dangerous and dumb. Yet, everyone has a friend or family member who does it anyway. In fact, 2 in 5 high school students text behind the wheel.', 
+'thumb@events.com',
+'201-322-9281', 3);
