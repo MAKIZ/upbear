@@ -2,4 +2,13 @@
 
 <h1>THIS IS THE EVENT-INDEX.EJS PAGE</h1>
 
+<% for (let events of data) { %>
+    <div class="events">
+        <h1><%= events.title %></h1>
+        <h2><%= events.date %></h2>
+        <h3><%= events.time %></h3>
+        <p><%= events.description %></p>
+    </div>
+<% } %>
+
 <% include ../partials/footer %>

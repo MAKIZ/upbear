@@ -42,7 +42,7 @@ app.listen(PORT, () => {
 //index
 app.get('/', (req, res) => {
   res.render('index', {
-      message: 'You are inside the index-page',
+      message: 'You are inside the root index-page',
       documentTitle: 'upbear app',
       subTitle: 'a volunteer event app'
   });
@@ -60,7 +60,7 @@ app.use('/user', userRoutes);
 
 //error handler
 app.use('*', (req, res) => {
-  res.status(400).json({
+  res.status(404).json({
     message: 'Not found!',
   });
 });

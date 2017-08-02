@@ -13,6 +13,7 @@ usersController.create = (req, res) => {
         firstname: req.body.firstname,
         lastname: req.body.lastname,
     }).then(user => {
+      console.log(user);
     req.login(user, (err) => {
       if (err) return next(err);
       res.redirect('/user');
@@ -24,6 +25,7 @@ usersController.create = (req, res) => {
 }
 
 usersController.index = (req, res) => {
+  console.log('usersController');
   res.redirect('/events');
 }
 

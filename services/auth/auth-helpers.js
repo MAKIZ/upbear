@@ -1,6 +1,6 @@
 //use bcrypt to compare passwords
 const bcrypt = require('bcryptjs');
-const User = require('../db/models/users');
+const User = require('../../db/models/users');
 
 function comparePass(userPassword, databasePassword) {
     return bcrypt.compareSync(userPassword, databasePassword);
