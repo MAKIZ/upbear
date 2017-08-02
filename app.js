@@ -52,6 +52,12 @@ app.get('/', (req, res) => {
 const eventRoutes = require('./routes/event-routes');
 app.use('/events', eventRoutes);
 
+//user route
+const authRoutes = require('./routes/auth-routes');
+app.use('/auth', authRoutes);
+const userRoutes = require('./routes/user-routes');
+app.use('/user', userRoutes);
+
 //error handler
 app.use('*', (req, res) => {
   res.status(400).json({

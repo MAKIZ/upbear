@@ -1,0 +1,13 @@
+<% include ../partials/header %>
+
+<form method='POST' action='/auth/register'>
+  <input name='username' type='text' placeholder='username' required />
+  <input name='email' type='email' placeholder='email' required />
+  <input name='password' type='password' placeholder='password' required />
+  <input name='firstname' type='firstname' placeholder='firstname' required />
+  <input name='lastname' type='lastname' placeholder='lastname' required />
+  <input type='submit' value='Register!' />
+</form>
+
+
+<% include ../partials/footer %>
