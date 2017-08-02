@@ -2,7 +2,7 @@ const db = require('../config');
 
 const User = {};
 
-User.findByUserName = (username) => {
+User.findUser = (username) => {
     return db.oneOrNone(`
         SELECT * FROM users
         WHERE username = $1
@@ -13,7 +13,7 @@ User.create = (user) => {
     return db.one(`
         INSERT INTO users
         (username, password_digest, email, firstname, lastname)
-        VALUE ($1, $2, $3, $4, $5)
+        VALUES ($1, $2, $3, $4, $5)
         RETURNING *
     `, [user.username, user.password_digest, user.email, user.firstname, user.lastname]);
 };

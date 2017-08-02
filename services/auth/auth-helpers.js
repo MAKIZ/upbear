@@ -1,14 +1,13 @@
-//use bcrypt to compare passwords
 const bcrypt = require('bcryptjs');
 const User = require('../../db/models/users');
 
 function comparePass(userPassword, databasePassword) {
-    return bcrypt.compareSync(userPassword, databasePassword);
+  return bcrypt.compareSync(userPassword, databasePassword);
 }
 
 function loginRedirect(req, res, next) {
-    if (req.user) return res.redirect('/user');
-    return next();
+  if (req.user) return res.redirect('/user');
+  return next();
 }
 
 function loginRequired(req, res, next) {
@@ -16,8 +15,8 @@ function loginRequired(req, res, next) {
   return next();
 }
 
-module.exports = { 
-    comparePass, 
-    loginRedirect, 
-    loginRequired, 
+module.exports = {
+  comparePass,
+  loginRedirect,
+  loginRequired,
 }
