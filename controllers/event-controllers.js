@@ -30,4 +30,22 @@ eventController.show = (req, res) => {
     });
 };
 
+//add event
+eventController.create = (req, res) => {
+    Event.create({
+        title: req.body.title,
+        date: req.body.date,
+        time: req.body.time,
+        location: req.body.location,
+        description: req.body.description,
+        organizer: req.body.organizer,
+        user_id: process.env.CURRENT_USER,
+    }).then(() => {
+        res.redirect('events')
+    }).catch(err => {
+        console.log(err);
+        res.status(500).json(err);
+    });
+};
+
 module.exports = eventController;
