@@ -26,7 +26,7 @@ userController.create = (req, res) => {
 }
 
 userController.index = (req, res) => {
-  console.log('userController');
+  // console.log('userController');
   User.findEventsByUser(req.user.id)
     .then((events) => {
       res.render('users/user-index', {

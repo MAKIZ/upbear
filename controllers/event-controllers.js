@@ -79,13 +79,13 @@ eventController.update = (req, res) => {
     });
 }
 
-delete event
+//delete event
 eventController.delete = (req, res) => {
     Event.destroy(req.params.id)
     .then(() => {
-        res.redirect('users/user-index');
+        res.redirect('/user');
     }).catch(err => {
-    console.log(err);
+    console.log(err);s
     res.status(500).json({ err });
   });
 }
