@@ -2,8 +2,6 @@ const db = require('../config');
 
 const User = {};
 
-
-
 User.findUser = (username) => {
     return db.oneOrNone(`
         SELECT * FROM users
@@ -26,6 +24,14 @@ User.findEventsByUser = id => {
     return db.manyOrNone(`
         SELECT * FROM events
         WHERE user_id = $1
+    `, [id])
+}
+
+//delete an event
+User.destroy = (id) => {
+    return db.none(`
+        DELETE FROM events
+        WHERE id = $1
     `, [id])
 }
 

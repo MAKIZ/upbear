@@ -41,7 +41,7 @@ eventController.create = (req, res) => {
         organizer: req.body.organizer,
         user_id: process.env.CURRENT_USER,
     }).then(() => {
-        res.redirect('events')
+        res.redirect('user')
     }).catch(err => {
         console.log(err);
         res.status(500).json(err);
@@ -79,11 +79,11 @@ eventController.update = (req, res) => {
     });
 }
 
-//delete event
+delete event
 eventController.delete = (req, res) => {
     Event.destroy(req.params.id)
     .then(() => {
-        res.redirect('/events');
+        res.redirect('users/user-index');
     }).catch(err => {
     console.log(err);
     res.status(500).json({ err });
