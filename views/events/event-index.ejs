@@ -5,9 +5,10 @@
 <% for (let events of data) { %>
     <div class="events">
         <h1><%= events.title %></h1>
-        <h2><%= events.date %></h2>
-        <h3><%= events.time %></h3>
-        <p><%= events.description %></p>
+        <h2><%= events.events_date %></h2>
+        <h3><%= events.events_time %></h3>
+        <p><%= events.events_description %></p>
+        <a href='events/<%= events.id%>'>Learn more</a>
     </div>
 <% } %>
 

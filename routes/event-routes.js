@@ -1,6 +1,7 @@
 const express = require('express');
 const eventRoutes = express.Router();
 
+const authHelpers = require('../services/auth/auth-helpers')
 const eventController = require('../controllers/event-controllers');
 
 eventRoutes.get('/', eventController.index);
@@ -13,5 +14,7 @@ eventRoutes.get('/add', (req, res) => {
 });
 
 eventRoutes.get('/:id', eventController.show);
-
+eventRoutes.get('/:id/edit', authHelpers.loginRequired,eventController.edit);
+eventRoutes.put('/:id', authHelpers.loginRequired,eventController.update);
+eventRoutes.delete('/id', authHelpers.loginRequired,eventController.delete)
 module.exports = eventRoutes

@@ -2,6 +2,8 @@ const db = require('../config');
 
 const User = {};
 
+
+
 User.findUser = (username) => {
     return db.oneOrNone(`
         SELECT * FROM users
@@ -17,5 +19,14 @@ User.create = (user) => {
         RETURNING *
     `, [user.username, user.password_digest, user.email, user.firstname, user.lastname]);
 };
+
+//add event by user
+User.findEventsByUser = id => {
+    console.log('events');
+    return db.manyOrNone(`
+        SELECT * FROM events
+        WHERE user_id = $1
+    `, [id])
+}
 
 module.exports = User;

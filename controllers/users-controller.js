@@ -1,5 +1,7 @@
 const bcrypt = require('bcryptjs');
 const User = require('../db/models/users');
+const Event = require('../db/models/events');
+
 
 const userController = {};
 
@@ -24,19 +26,18 @@ userController.create = (req, res) => {
 }
 
 userController.index = (req, res) => {
-  // console.log('userController');
-  User.findUser(req.user.username)
-    .then((users) => {
+  console.log('userController');
+  User.findEventsByUser(req.user.id)
+    .then((events) => {
       res.render('users/user-index', {
         currentPage: 'index',
         message: 'ok',
-        data: users,
+        data: events,
       });
-    }).catch((err) => {
+    }).catch(err => {
       console.log(err);
       res.status(500).json({err: err});
     });
 }
-
 
 module.exports = userController;

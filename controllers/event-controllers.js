@@ -48,4 +48,46 @@ eventController.create = (req, res) => {
     });
 };
 
+//edit event
+eventController.edit = (req, res) => {
+    Event.findById(req.params.id)
+    .then(events => {
+        res.render('events/event-edit', {
+            events: events,
+        })
+    }).catch(err => {
+        console.log(err);
+        res.status(500).json(err);
+    });
+};
+
+//update event
+eventController.update = (req, res) => {
+    Event.update({
+        title: req.body.title,
+        date: req.body.date,
+        time: req.body.time,
+        location: req.body.location,
+        description: req.body.description,
+        organizer: req.body.organizer,
+        user_id: process.env.CURRENT_USER,
+    }, req.params.id).then(events => {
+        res.redirect('events/${`req.params.id}');
+    }).catch(err => {
+        console.log(err);
+        res.status(500).json(err);
+    });
+}
+
+//delete event
+eventController.delete = (req, res) => {
+    Event.destroy(req.params.id)
+    .then(() => {
+        res.redirect('/events');
+    }).catch(err => {
+    console.log(err);
+    res.status(500).json({ err });
+  });
+}
+
 module.exports = eventController;
