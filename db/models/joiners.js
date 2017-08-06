@@ -2,14 +2,13 @@ const db = require('../config');
 
 const Joiner = {};
 
-//join an event
-Joiner.create = (joiner) => {
-    return db.one(`
+Joiner.create = (join) => {
+    return db.manyOrNone (`
         INSERT INTO joiners
-        (email, firstname, lastname, phone, events_id)
+        (firstname, lastname, email, user_id, events_id)
         VALUES ($1, $2, $3, $4, $5)
         RETURNING *
-    `, [joiners.email, joiners.firstname, joiners.lastname, joiners.phone, joiners.events.id]);
-}
+    `, [join.firstname, join.lastname, join.email, join.user_id, join.events_id]);
+};
 
 module.exports = Joiner;

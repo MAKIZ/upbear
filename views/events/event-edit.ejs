@@ -1,15 +1,17 @@
 <% include ../partials/header %>
 
+<div class="container">
 <h1>EDIT EVENT</h1>
 
-<form method='POST' action='/events/<%= events.id %>?_method=PUT'>
-    <input name='title' type='text' value='<%= events.title %>' />
-    <input name='date' type="date" value="events.date, MM/DD/YYYY"placeholder='date' />
-    <input name='time' type='text' value='<%= events.time %>' />
-    <input name='location' type='text' value='<%= events.location %>' />
-    <textarea name="description" id="description" value='<%= events.description %>'></textarea>
-    <input name='organizer' type='text' value='<%= events.organizer %>' />
-    <input class="" type='submit' value='Edit!' />
-</form>
+    <form method='POST' action='/events/<%= events.id %>?_method=PUT'>
+        <input name='title' type='text' value='<%= events.title %>' />
+        <input name='date' type="date" value="events.date, MM/DD/YYYY"placeholder='date' />
+        <input name='time' type='text' value='<%= events.time %>' />
+        <input name='location' type='text' value='<%= events.location %>' />
+        <textarea name="description" id="description" value='<%= events.description %>'></textarea>
+        <input name='organizer' type='text' value='<%= events.organizer %>' />
+        <input class="" type='submit' value='Edit!' />
+    </form>
 
+</div>
 <% include ../partials/footer %>

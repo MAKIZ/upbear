@@ -54,11 +54,15 @@ app.use('/events', eventRoutes);
 
 //joiner route
 const joinerRoutes = require('./routes/joiner-routes');
-app.use('/joiner', joinerRoutes);
+app.use('/join', joinerRoutes);
 
 //auth route
 const authRoutes = require('./routes/auth-routes');
 app.use('/auth', authRoutes);
+
+//campaign routes
+const campaignRoutes = require('./routes/campaign-routes');
+app.use('/campaigns', campaignRoutes);
 
 //user route
 const userRoutes = require('./routes/user-routes');

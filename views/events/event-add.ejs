@@ -1,13 +1,14 @@
 <% include ../partials/header %>
 
-<form method='POST' action='/events'>
-  <input name='title' type='text' placeholder='title' />
-  <input name='date' type="date" value="date"placeholder='date' />
-  <input name='time' type='text' placeholder='time' />
-  <input name='location' type='text' placeholder='location' />
-  <textarea name="description" id="description"></textarea>
-  <input name='organizer' type='text' placeholder='organizer' />
-  <input class="" type='submit' value='Submit!' />
-</form>
-
+<div class="container">
+  <form method='POST' action='/events'>
+    <input name='title' type='text' placeholder='title' />
+    <input name='date' type="date" value="date"placeholder='date' />
+    <input name='time' type='text' placeholder='time' />
+    <input name='location' type='text' placeholder='location' />
+    <textarea name="description" id="description"></textarea>
+    <input name='organizer' type='text' placeholder='organizer' />
+    <input class="" type='submit' value='Submit!' />
+  </form>
+</div>
 <% include ../partials/footer %>

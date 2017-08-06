@@ -1,11 +1,13 @@
 <% include ../partials/header %>
 
-<form method='POST' action='/joiner'>
-  <input name='email' type='text' placeholder='email' />
-  <input name='firstname' type="text" placeholder='firstname' />
-  <input name='lastname' type='text' placeholder='lastname' />
-  <input name='phone' type='text' placeholder='phone' />
-  <input class="" type='submit' value='Submit!' />
-</form>
+<div class="container">
 
+  <form method='POST' action='/join'>
+    <input name='firstname' type='text' placeholder='firstname' />
+    <input name='lastname' type='text' placeholder='lastname' />
+    <input name='email' type='text' placeholder='email' />
+    <input class="" type='submit' value='Register' />
+  </form>
+
+</div>
 <% include ../partials/footer %>

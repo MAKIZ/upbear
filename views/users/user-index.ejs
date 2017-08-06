@@ -1,10 +1,7 @@
-<% include ../partials/header %>
+<% include ../partials/user-nav %>
 
+<div class="container">
 <h1>THIS IS THE USER-INDEX.EJS PAGE</h1>
-
-<div>
-<h2><% data.firstname %></h2>
-</div>
 
     <% for (let event of data) { %>
       <div>
@@ -25,14 +22,6 @@
 
     <% } %>
 
-<br>
-
-<a href="../auth/logout">LOGOUT</a>
-
-<br>
-
-<div>
-<a href="../events/add">CREATE EVENT</a>
 </div>
 
 <% include ../partials/footer %>

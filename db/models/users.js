@@ -20,12 +20,10 @@ User.create = (user) => {
 
 //add event by user
 User.findEventsByUser = id => {
-    console.log('events');
     return db.manyOrNone(`
         SELECT * FROM events
         WHERE user_id = $1
     `, [id])
 }
-
 
 module.exports = User;

@@ -1,0 +1,14 @@
+<% include ../partials/header %>
+
+<div class="container">
+<h1>THIS IS THE CAMPAIGN-INDEX.EJS PAGE</h1>
+
+<% campaign.forEach(function(campaign) { %>
+  <h1><%= campaign.title %></h1>
+  <h2><%= campaign.tagline %></h2>
+  <p><%= campaign.facts.problem %></p>
+<% }) %>
+
+
+</div>
+<% include ../partials/footer %>

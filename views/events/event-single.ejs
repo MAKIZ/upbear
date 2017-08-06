@@ -1,11 +1,15 @@
 <% include ../partials/header %>
 
+<div class="container">
 <h1>THIS IS THE EVENT-SINGLE-INDEX.EJS PAGE</h1>
 
-<div>
-    <h1><%= data.title %></h1>
-    <h3><%= data.date %></h3>
-    <h3><%= data.time %></h3>
-</div>
+    <div>
+        <h1><%= data.title %></h1>
+        <h3><%= data.date %></h3>
+        <h3><%= data.time %></h3>
+    </div>
 
+    <a href="/join/register">Join Event</a>
+
+</div>
 <% include ../partials/footer %>
