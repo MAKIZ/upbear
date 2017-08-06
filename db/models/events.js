@@ -35,7 +35,10 @@ Event.update = (event, id) => {
         location = $4,
         description = $5,
         organizer = $6,
-    `, [event.title, event.date, event.time, event.location, event.description, event.organizer, id])
+        user_id = $7
+        WHERE id = $8
+        RETURNING *
+    `, [event.title, event.date, event.time, event.location, event.description, event.organizer, event.user_id, id])
 }
 
 //delete event

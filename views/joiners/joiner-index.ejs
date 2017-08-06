@@ -1,0 +1,15 @@
+<% include ../partials/header %>
+
+<h1>THIS IS THE JOINER-INDEX.EJS PAGE</h1>
+
+<% for (let joiner of data) { %>
+    <div class="events">
+        <h1><%= joiner.email %></h1>
+        <h2><%= joiner.firstname %></h2>
+        <h3><%= joiner.lastname %></h3>
+        <p><%= joiner.phone %></p>
+        <a href='events/<%= events.id%>'>Learn more</a>
+    </div>
+<% } %>
+
+<% include ../partials/footer %>

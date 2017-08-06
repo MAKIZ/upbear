@@ -52,9 +52,15 @@ app.get('/', (req, res) => {
 const eventRoutes = require('./routes/event-routes');
 app.use('/events', eventRoutes);
 
-//user route
+//joiner route
+const joinerRoutes = require('./routes/joiner-routes');
+app.use('/joiner', joinerRoutes);
+
+//auth route
 const authRoutes = require('./routes/auth-routes');
 app.use('/auth', authRoutes);
+
+//user route
 const userRoutes = require('./routes/user-routes');
 app.use('/user', userRoutes);
 

@@ -13,6 +13,11 @@
         <h3><%= event.time %></h3>
         <h3><%= event.description %></h3>
         <a href='events/<%= event.id%>'>Learn more</a>
+
+  <br>
+
+  <a href='events/<%= event.id %>/edit'>Edit it!</a>
+
   <form method='POST' action='events/<%= event.id %>?_method=DELETE'>
   <input type='submit' value='DELETE IT' />
   </form>

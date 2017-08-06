@@ -27,12 +27,5 @@ User.findEventsByUser = id => {
     `, [id])
 }
 
-//delete an event
-User.destroy = (id) => {
-    return db.none(`
-        DELETE FROM events
-        WHERE id = $1
-    `, [id])
-}
 
 module.exports = User;

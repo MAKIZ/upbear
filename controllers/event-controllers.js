@@ -41,7 +41,7 @@ eventController.create = (req, res) => {
         organizer: req.body.organizer,
         user_id: process.env.CURRENT_USER,
     }).then(() => {
-        res.redirect('user')
+        res.redirect('/user')
     }).catch(err => {
         console.log(err);
         res.status(500).json(err);
@@ -72,7 +72,7 @@ eventController.update = (req, res) => {
         organizer: req.body.organizer,
         user_id: process.env.CURRENT_USER,
     }, req.params.id).then(events => {
-        res.redirect('events/${`req.params.id}');
+        res.redirect(`/events/${req.params.id}`);
     }).catch(err => {
         console.log(err);
         res.status(500).json(err);

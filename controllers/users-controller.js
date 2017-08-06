@@ -40,15 +40,5 @@ userController.index = (req, res) => {
     });
 }
 
-//delete event
-// userController.delete = (req, res) => {
-//     User.destroy(req.params.id)
-//     .then(() => {
-//         res.redirect('users/user-index');
-//     }).catch(err => {
-//     console.log(err);
-//     res.status(500).json({ err });
-//   });
-// }
 
 module.exports = userController;
