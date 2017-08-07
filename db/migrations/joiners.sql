@@ -1,5 +1,3 @@
-\c upbear_dev
-
 CREATE TABLE IF NOT EXISTS joiners (
   id SERIAL PRIMARY KEY,
   firstname VARCHAR(255) NOT NULL,

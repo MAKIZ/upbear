@@ -1,5 +1,3 @@
-\c upbear_dev
-
 CREATE TABLE IF NOT EXISTS events (
   id SERIAL PRIMARY KEY,
   title VARCHAR(255),
