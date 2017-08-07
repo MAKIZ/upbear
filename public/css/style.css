@@ -1,0 +1,54 @@
+body {
+    background-color: snow;
+}
+
+/* FORM */
+.form-style {
+    width: 50%;
+    margin: 30px auto;
+}
+
+/* ALIGNMENT */
+.text-center {
+    text-align: center;
+}
+
+.tagline {
+    position: absolute;
+    padding-top: 18px; 
+    color: gold;
+}
+
+.img-single {
+    width: 100%;
+    height: 80vh;
+    position: relative;
+    top: 0;
+}
+
+.event-index-img {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.see-events {
+    background: gold;
+    color: white;
+}
+
+.create-events{
+    background: limegreen;
+    color: white;
+}
+
+.margin-btm {
+    margin-bottom: 40px;
+}
+
+/* SLIDESHOW */
+.slideshow {
+    width: 100%;
+    height: 100vh;
+    position: relative;
+    top: 0;
+}

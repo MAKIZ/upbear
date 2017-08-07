@@ -1,9 +1,47 @@
 <% include ./partials/header %>
 
-<div class="container">
-<h1>HELLO YOU ARE INSIDE MY INDEX.EJS PAGE</h1>
-</div>
+<!-- slideshow -->
+<div id="myCarousel" class="carousel slide" data-ride="carousel">
 
-<a href="events">See all events</a>
+  <!-- slide images-->
+  <div class="carousel-inner slideshow">
+    <div class="item active">
+      <img src="/images/nicole-adams-198431.jpg" alt="image by nicole adams Unsplash">
+    </div>
+
+    <div class="item">
+      <img src="/images/doug-linstedt-135670.jpg" alt="image by doug linstedt Unsplash">
+    </div>
+
+    <div class="item">
+      <img src="/images/larm-rmah-216854.jpg" alt="image by carson-arias Unsplash">
+    </div>
+  </div>
+
+<!-- -->
+	<div id="intro">
+		<div class="container">
+			<div class="row centered">
+				<h1 class="text-center">What is Upbear</h1>
+				<div class="col-lg-4">
+					<h3>Merriam-Webster</h3>
+					<h4>Definition of upbear</h4>
+                    <p>: to bear up :  support raise</p>
+				</div>
+				<div class="col-lg-4">
+					<h3>Volunteering</h3>
+					<p>You don’t have to quit your day job to make a difference in your community.We believe that regular people who care deeply about their city can spark real change.</p>
+				</div>
+				<div class="col-lg-4">
+					<h3>Community</h3>
+					<p>We're a community! we connect people who want to change the world together.</p>
+				</div>
+			</div>
+			<br>
+			<hr>
+	    </div>
+	</div>
+
+</div>
 
 <% include ./partials/footer %>

@@ -1,15 +1,25 @@
 <% include ../partials/header %>
+<br> <br> <br>
 
-<div class="container">
-<h1>THIS IS THE EVENT-SINGLE-INDEX.EJS PAGE</h1>
-
-    <div>
-        <h1><%= data.title %></h1>
+    <div class="page-header text-center">
+        <h2><%= data.title %></h2>
         <h3><%= data.date %></h3>
         <h3><%= data.time %></h3>
     </div>
 
-    <a href="/join/register">Join Event</a>
-
+<div class="container">
+    <div class=""row>
+        <img class="img-single" src="/images/nitish-meena-198784.jpg">
+    </div>
+    <br>
+    <div>
+        <p><%= data.description %></p>
+    </div>
+    <br>
+    <div class=""row>
+    <a class="btn btn-primary btn-info" href="/join/register">Join Event</a>
+    </div>
 </div>
+
+
 <% include ../partials/footer %>

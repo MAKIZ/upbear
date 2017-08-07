@@ -1,27 +1,33 @@
 <% include ../partials/user-nav %>
+<br> <br>
 
 <div class="container">
-<h1>THIS IS THE USER-INDEX.EJS PAGE</h1>
+  <div class="page-header">
+      <h1>Welcome Back</h1>
+  </div>
 
+  <h3>Your Events</h3>
+
+<div class="container">
+<div class="row event-index-img">
     <% for (let event of data) { %>
-      <div>
+    <div class="col-lg-6 centered">
+      <img class="centered img-responsive margin-btm" src="/images/larm-rmah-216854.jpg">
+    </div>
+
+    <div class="col-lg-6">
         <h2><%= event.title %></h2>
         <h3><%= event.date %></h3>
         <h3><%= event.time %></h3>
         <h3><%= event.description %></h3>
-        <a href='events/<%= event.id%>'>Learn more</a>
-
-  <br>
-
-  <a href='events/<%= event.id %>/edit'>Edit it!</a>
-
-  <form method='POST' action='events/<%= event.id %>?_method=DELETE'>
-  <input type='submit' value='DELETE IT' />
-  </form>
+        <div><a href='events/<%= event.id%>'>Learn more</a></div>
+        <div><a href='events/<%= event.id %>/edit'>Edit it!</a></div>
+        
+        <form method='POST' action='events/<%= event.id %>?_method=DELETE'>
+        <input type='submit' value='DELETE EVENT' />
+        </form>
       </div>
-
     <% } %>
-
+</div>    
 </div>
-
 <% include ../partials/footer %>

@@ -1,17 +1,30 @@
 <% include ../partials/header %>
-
+ <br> <br> <br>
 <div class="container">
-<h1>THIS IS THE EVENT-INDEX.EJS PAGE</h1>
 
-<% for (let events of data) { %>
-    <div class="events">
-        <h1><%= events.title %></h1>
-        <h2><%= events.date %></h2>
-        <h3><%= events.time %></h3>
-        <p><%= events.description %></p>
-        <a href='events/<%= events.id%>'>Learn more</a>
+    <div class="row">
+        <div class="col-lg-12">
+            <h2>See Upcoming Events</h2>
+            <p>This events are created by individual or group of people that has the power and the passion to make a difference on issues that matter</p>
+        </div>
     </div>
-<% } %>
 
+<br><br>        
+
+    <div class="row event-index-img">
+        <% for (let events of data) { %>
+            <div class="col-md-4 col--sm-6">
+                <div class="thumbnail text-center">
+                <img src="/images/vlad-tchompalov-248830.jpg">
+                <div class="caption">
+                    <h4><%= events.title %></h4>
+                    <h5><%= events.date %></h5>
+                    <p><%= events.time %></p>
+                </div>
+                    <a class="btn btn-block btn-info" href='events/<%= events.id%>'>Learn More</a>
+                </div>               
+            </div>
+        <% } %>        
+    </div>
 </div>
 <% include ../partials/footer %>
