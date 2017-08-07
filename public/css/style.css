@@ -63,3 +63,7 @@ body {
     height: 25em;
     color: white;
 }
+
+.max-height {
+    height: 80vh;
+}

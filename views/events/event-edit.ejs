@@ -1,32 +1,34 @@
-<% include ../partials/header %>
+<% include ../partials/user-nav %>
  <br> <br> <br>
 
-<div class="container">
-    <div class="row">
-    <h1 class="text-center">EDIT EVENT</h1>
-    <div class="form-style">
-        <form method='POST' action='/events/<%= events.id %>?_method=PUT'>
-            <div class="form-group">
-                <input class="form-control" name='title' type='text' value='<%= events.title %>' />
-            </div>
-            <div class="form-group">    
-                <input class="form-control" name='date' type="date" value="events.date, MM/DD/YYYY"placeholder='date' />
-            </div>
-            <div class="form-group">    
-                <input class="form-control" name='time' type='text' value='<%= events.time %>' />
-            </div>
-            <div class="form-group">    
-                <input class="form-control" name='location' type='text' value='<%= events.location %>' />
-            </div>
-            <div class="form-group">    
-                <textarea class="form-control" name="description" id="description" value='<%= events.description %>'></textarea>
-            </div>
-            <div class="form-group">    
-                <input class="form-control" name='organizer' type='text' value='<%= events.organizer %>' />
-            </div>
-            <button class="btn btn-primary btn-default btn-md">Submit</button>    
-        </form>
+<div class="max-height">
+    <div class="container">
+        <div class="row">
+        <h1 class="text-center">EDIT EVENT</h1>
+        <div class="form-style">
+            <form method='POST' action='/events/<%= events.id %>?_method=PUT'>
+                <div class="form-group">
+                    <input class="form-control" name='title' type='text' value='<%= events.title %>' />
+                </div>
+                <div class="form-group">    
+                    <input class="form-control" name='date' type="date" value="events.date, MM/DD/YYYY"placeholder='date' />
+                </div>
+                <div class="form-group">    
+                    <input class="form-control" name='time' type='text' value='<%= events.time %>' />
+                </div>
+                <div class="form-group">    
+                    <input class="form-control" name='location' type='text' placeholder="location" value='<%= events.location %>' />
+                </div>
+                <div class="form-group">    
+                    <textarea class="form-control" name="description" id="description" value='<%= events.description %>'></textarea>
+                </div>
+                <div class="form-group">    
+                    <input class="form-control" name='organizer' type='text' value='<%= events.organizer %>' />
+                </div>
+                <button class="btn btn-primary btn-default btn-md">Submit</button>    
+            </form>
+        </div>
+        </div>
     </div>
-    </div>
-</div>
+</div>    
 <% include ../partials/footer %>

@@ -20,11 +20,16 @@
         <h3><%= event.date %></h3>
         <h3><%= event.time %></h3>
         <h3><%= event.description %></h3>
-        <div><a href='events/<%= event.id%>'>Learn more</a></div>
-        <div><a href='events/<%= event.id %>/edit'>Edit it!</a></div>
+        <div><a href='events/<%= event.id%>'>Show More</a></div>
+        <br>
         
+        <a class="btn btn-default btn-primary" href='events/<%= event.id %>/edit'>Edit this Event</a>
+
+        <br> <br>
+
         <form method='POST' action='events/<%= event.id %>?_method=DELETE'>
-        <input type='submit' value='DELETE EVENT' />
+        <button class="btn btn-danger btn-default btn-md">Delete this Event</button>
+          </form>  
         </form>
       </div>
     <% } %>
