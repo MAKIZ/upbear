@@ -18,6 +18,7 @@ joinerController.index = (req, res) => {
     });
 };
 
+//create users/guest wants to join an event
 joinerController.create = (req, res) => {
     Joiner.create ({
         firstname: req.body.firstname,
