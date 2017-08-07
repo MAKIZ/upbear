@@ -1,14 +1,29 @@
 <% include ../partials/header %>
+<br> <br> <br> <br>
 
 <div class="container">
-<h1>THIS IS THE CAMPAIGN-INDEX.EJS PAGE</h1>
 
-<% campaign.forEach(function(campaign) { %>
-  <h1><%= campaign.title %></h1>
-  <h2><%= campaign.tagline %></h2>
-  <p><%= campaign.facts.problem %></p>
-<% }) %>
+  <div class="text-center">
+    <h1>A Global Movement for Good</h1>
+    <h4>Find ways to take action both online and off</h4>
+    <br>
+  </div>  
 
-
+    <div class="row event-index-img">
+      <% campaign.forEach(function(campaign) { %>
+      <div class="col-md-4 col--sm-6">
+        <div class="thumbnail text-center">
+          <div class="caption">
+            <h3><%= campaign.title %></h3>
+            <br>
+            <h5><%= campaign.tagline %></h5>
+            <br>
+            <p><%= campaign.facts.problem %></p>
+          </div>
+          <a class="btn btn-info margin-btm" href='<%= campaign.uri %>'>See Campaign</a>
+        </div>
+      </div>   
+      <% }) %>
+    </div>
 </div>
 <% include ../partials/footer %>

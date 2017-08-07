@@ -31,6 +31,10 @@ body {
     flex-wrap: wrap;
 }
 
+.campaign-index-wrap {
+    height: 100%;
+}
+
 .see-events {
     background: gold;
     color: white;
@@ -51,4 +55,11 @@ body {
     height: 100vh;
     position: relative;
     top: 0;
+}
+
+.dosomething {
+    background-color: midnightblue;
+    padding-top: 20px;
+    height: 25em;
+    color: white;
 }
